@@ -3,184 +3,322 @@
 
 <head>
 
-    <!-- Configuração de caracteres -->
+    <!-- CONFIGURAÇÕES -->
     <meta charset="UTF-8">
-
-    <!-- Faz o site funcionar corretamente no telemóvel -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Nome que aparece na aba do navegador -->
-    <title>Gabriel Fusari | Portfólio</title>
+    <!-- TÍTULO -->
+    <title>Gabriel Fusari | Full Stack Developer</title>
 
-    <!-- Importação da fonte moderna Poppins -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- FONTE -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- ÍCONES -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <style>
 
-        /* Reset básico do site */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        /* RESET */
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
         }
 
-        /* Corpo principal da página */
-        body {
+        /* BODY */
 
-            /* Cor de fundo preta */
-            background: #0a0a0a;
+        body{
 
-            /* Fonte do site */
-            font-family: 'Poppins', sans-serif;
+            font-family:'Poppins', sans-serif;
 
-            /* Cor padrão do texto */
-            color: white;
+            background:
+            linear-gradient(
+            180deg,
+            #0a0a0a 0%,
+            #050505 100%
+            );
 
-            /* Centraliza tudo */
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            color:white;
 
-            /* Altura mínima da tela */
-            min-height: 100vh;
+            min-height:100vh;
 
-            /* Espaçamento lateral */
-            padding: 20px;
+            display:flex;
+
+            justify-content:center;
+
+            align-items:center;
+
+            padding:24px;
         }
 
-        /* Card principal */
-        .card {
+        /* CARD */
 
-            /* Largura máxima para mobile */
-            width: 100%;
-            max-width: 420px;
+        .card{
 
-            /* Fundo do card */
-            background: #111111;
+            width:100%;
+            max-width:430px;
 
-            /* Bordas arredondadas */
-            border-radius: 24px;
+            background:#111111;
 
-            /* Espaçamento interno */
-            padding: 35px 25px;
+            border:1px solid rgba(255,255,255,0.05);
 
-            /* Centraliza textos */
-            text-align: center;
+            border-radius:28px;
 
-            /* Borda dourada suave */
-            border: 1px solid rgba(212,175,55,0.15);
+            padding:42px 30px;
 
-            /* Sombra elegante */
-            box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+            text-align:center;
 
-            /* Animação ao abrir */
-            animation: fadeIn 1s ease;
+            box-shadow:
+            0 10px 40px rgba(0,0,0,0.6);
+
+            animation:fadeUp 1s ease;
         }
 
-        /* Foto de perfil */
-        .profile-img {
+        /* FOTO */
 
-            /* Tamanho da imagem */
-            width: 115px;
-            height: 115px;
+        .profile-wrapper{
 
-            /* Faz a imagem virar círculo */
-            border-radius: 50%;
+            width:125px;
+            height:125px;
 
-            /* Ajusta imagem sem deformar */
-            object-fit: cover;
+            margin:auto;
+            margin-bottom:24px;
 
-            /* Borda dourada */
-            border: 3px solid #d4af37;
+            border-radius:50%;
 
-            /* Espaço abaixo da foto */
-            margin-bottom: 20px;
+            padding:4px;
+
+            background:
+            linear-gradient(
+            135deg,
+            #d4af37,
+            #8b5cf6
+            );
+
+            box-shadow:
+            0 0 30px rgba(212,175,55,0.15);
         }
 
-        /* Nome principal */
-        h1 {
+        .profile-img{
 
-            font-size: 28px;
-            font-weight: 600;
+            width:100%;
+            height:100%;
 
-            margin-bottom: 8px;
+            object-fit:cover;
 
-            letter-spacing: 1px;
+            border-radius:50%;
+
+            border:3px solid #111;
         }
 
-        /* Texto abaixo do nome */
-        p {
+        /* NOME */
 
-            color: #b3b3b3;
+        h1{
 
-            font-size: 14px;
+            font-size:34px;
 
-            line-height: 1.6;
+            font-weight:700;
 
-            margin-bottom: 28px;
+            margin-bottom:10px;
+
+            letter-spacing:0.5px;
         }
 
-        /* Estilo padrão dos botões */
-        .btn {
+        /* CARGO */
 
-            display: block;
+        .role{
 
-            width: 100%;
+            color:#d4af37;
 
-            padding: 15px;
+            font-size:12px;
 
-            margin-bottom: 15px;
+            font-weight:600;
 
-            border-radius: 14px;
+            letter-spacing:3px;
 
-            text-decoration: none;
+            text-transform:uppercase;
 
-            font-weight: 500;
-
-            font-size: 15px;
-
-            background: #1a1a1a;
-
-            color: #d4af37;
-
-            border: 1px solid rgba(212,175,55,0.2);
-
-            transition: all 0.3s ease;
+            margin-bottom:20px;
         }
 
-        /* Efeito quando passa o rato em cima */
-        .btn:hover {
+        /* DESCRIÇÃO */
 
-            background: #d4af37;
+        .description{
 
-            color: black;
+            color:#a8a8a8;
 
-            transform: translateY(-2px);
+            font-size:14px;
 
-            box-shadow: 0 5px 20px rgba(212,175,55,0.3);
+            line-height:1.9;
+
+            max-width:320px;
+
+            margin:auto;
+
+            margin-bottom:30px;
         }
 
-        /* Rodapé */
-        .footer {
+        /* STACK */
 
-            margin-top: 25px;
+        .stack{
 
-            font-size: 12px;
+            display:flex;
 
-            color: #666;
+            justify-content:center;
+
+            flex-wrap:wrap;
+
+            gap:10px;
+
+            margin-bottom:34px;
         }
 
-        /* Animação do card aparecendo */
-        @keyframes fadeIn {
+        .tag{
 
-            from {
-                opacity: 0;
-                transform: translateY(20px);
+            padding:9px 15px;
+
+            border-radius:30px;
+
+            background:#171717;
+
+            border:1px solid rgba(255,255,255,0.05);
+
+            color:#d4af37;
+
+            font-size:12px;
+
+            transition:0.35s cubic-bezier(.16,1,.3,1);
+        }
+
+        .tag:hover{
+
+            transform:translateY(-2px);
+
+            background:#1d1d1d;
+        }
+
+        /* BOTÕES */
+
+        .btn{
+
+            display:flex;
+
+            align-items:center;
+
+            justify-content:center;
+
+            gap:12px;
+
+            width:100%;
+
+            padding:16px;
+
+            margin-bottom:15px;
+
+            border-radius:16px;
+
+            text-decoration:none;
+
+            background:#181818;
+
+            border:1px solid rgba(255,255,255,0.05);
+
+            color:white;
+
+            font-size:15px;
+
+            font-weight:500;
+
+            transition:
+            all 0.4s cubic-bezier(.16,1,.3,1);
+        }
+
+        .btn i{
+
+            color:#d4af37;
+
+            font-size:16px;
+
+            transition:0.3s;
+        }
+
+        /* HOVER PREMIUM */
+
+        .btn:hover{
+
+            transform:translateY(-2px);
+
+            background:#d4af37;
+
+            color:black;
+
+            box-shadow:
+            0 8px 25px rgba(212,175,55,0.18);
+        }
+
+        .btn:hover i{
+
+            color:black;
+        }
+
+        /* ESTATÍSTICAS */
+
+        .stats{
+
+            display:flex;
+
+            justify-content:space-between;
+
+            margin-top:28px;
+
+            padding-top:24px;
+
+            border-top:1px solid rgba(255,255,255,0.05);
+        }
+
+        .stat h3{
+
+            color:#d4af37;
+
+            font-size:20px;
+
+            margin-bottom:4px;
+        }
+
+        .stat p{
+
+            color:#777;
+
+            font-size:11px;
+        }
+
+        /* FOOTER */
+
+        .footer{
+
+            margin-top:28px;
+
+            font-size:12px;
+
+            color:#666;
+        }
+
+        /* ANIMAÇÃO */
+
+        @keyframes fadeUp{
+
+            from{
+
+                opacity:0;
+                transform:translateY(25px);
             }
 
-            to {
-                opacity: 1;
-                transform: translateY(0);
+            to{
+
+                opacity:1;
+                transform:translateY(0);
             }
         }
 
@@ -190,52 +328,147 @@
 
 <body>
 
-    <!-- Card principal do portfólio -->
+    <!-- CARD -->
+
     <div class="card">
 
-        <!-- Foto de perfil -->
-        <img class="profile-img"
-        src="foto.jpeg"
-        alt="Foto de perfil">
+        <!-- FOTO -->
 
-        <!-- Seu nome -->
+        <div class="profile-wrapper">
+
+            <img
+            class="profile-img"
+            src="./foto.jpeg"
+            alt="Gabriel Fusari">
+
+        </div>
+
+        <!-- NOME -->
+
         <h1>Gabriel Fusari</h1>
 
-        <!-- Pequena descrição -->
-        <p>
-            Desenvolvedor e criador digital focado em experiências modernas,
-            elegantes e funcionais.
-        </p>
+        <!-- CARGO -->
 
-        <!-- Botão Instagram -->
-        <a class="btn"
+        <div class="role">
+
+            Full Stack Developer
+
+        </div>
+
+        <!-- DESCRIÇÃO -->
+
+        <div class="description">
+
+            Desenvolvedor Full Stack focado em
+            interfaces modernas, automações
+            e soluções web escaláveis.
+
+        </div>
+
+        <!-- STACK -->
+
+        <div class="stack">
+
+            <div class="tag">JavaScript</div>
+
+            <div class="tag">Python</div>
+
+            <div class="tag">React</div>
+
+            <div class="tag">SQL</div>
+
+            <div class="tag">UI/UX</div>
+
+            <div class="tag">APIs</div>
+
+        </div>
+
+        <!-- INSTAGRAM -->
+
+        <a
+        class="btn"
         href="https://instagram.com/gabriel_fusari_"
         target="_blank">
 
-            Ver Instagram →
+            <i class="fa-brands fa-instagram"></i>
+
+            Instagram
 
         </a>
 
-        <!-- Botão Email -->
-        <a class="btn"
+        <!-- EMAIL -->
+
+        <a
+        class="btn"
         href="mailto:gabrielfuzaript@gmail.com">
 
-            Enviar Email →
+            <i class="fa-solid fa-envelope"></i>
+
+            Email
 
         </a>
 
-        <!-- Botão Telefone -->
-        <a class="btn"
-        href="tel:+351936709745">
+        <!-- WHATSAPP -->
 
-            Entrar em Contato →
+        <a
+        class="btn"
+        href="https://wa.me/351936709745"
+        target="_blank">
+
+            <i class="fa-brands fa-whatsapp"></i>
+
+            WhatsApp
 
         </a>
 
-        <!-- Rodapé -->
+        <!-- GITHUB -->
+
+        <a
+        class="btn"
+        href="https://github.com/"
+        target="_blank">
+
+            <i class="fa-brands fa-github"></i>
+
+            GitHub
+
+        </a>
+
+        <!-- ESTATÍSTICAS -->
+
+        <div class="stats">
+
+            <div class="stat">
+
+                <h3>20+</h3>
+
+                <p>Projetos</p>
+
+            </div>
+
+            <div class="stat">
+
+                <h3>3+</h3>
+
+                <p>Tecnologias</p>
+
+            </div>
+
+            <div class="stat">
+
+                <h3>100%</h3>
+
+                <p>Responsivo</p>
+
+            </div>
+
+        </div>
+
+        <!-- FOOTER -->
+
         <div class="footer">
 
-            © Gabriel Fusari
+            © 2026 Gabriel Fusari — All Rights Reserved
 
         </div>
 
